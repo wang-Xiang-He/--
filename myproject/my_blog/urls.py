@@ -21,6 +21,7 @@ from django.conf.urls.static import static
 import notifications.urls
 from article.views import article_list
 from nba.views import homepage
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -46,6 +47,12 @@ urlpatterns = [
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+
+# ... the rest of your URLconf goes here ...
+
+urlpatterns += staticfiles_urlpatterns() #for gunicorn
 
 # 参数article/分配了app的访问路径；
 # include将路径分发给下一步处理；
