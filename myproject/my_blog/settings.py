@@ -87,19 +87,19 @@ ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
 
 #第三方发送邮件
-EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
-# MAILGUN_ACCESS_KEY='pubkey-97ec101d5207bbf68160f82af10f1b82'#上图所示
-# MAILGUN_SERVER_NAME='sandbox38e9e90da12e4e65ad41477e61669e18.mailgun.org'#你的domain
-EMAIL_USE_TLS = True
-EMAIL_PORT = 587
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'a102204022@gmail.com'
-# LOGIN_REDIRECT_URL = '/article/article-list'
-LOGIN_REDIRECT_URL = '/'
-DEFAULT_FROM_EMAIL = '翔禾 <a102204022@gmail.com>'
-EMAIL_HOST_PASSWORD = 'rlxizckyvaqvaays'
-# from django.core.mail import send_mail
-# send_mail('MailGun works great!', 'It really really does.', 'postermaster@YOURHOST.com', ['YOUREMAIL@gmail.com'], fail_silently=False)
+# EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+# # MAILGUN_ACCESS_KEY='pubkey-97ec101d5207bbf68160f82af10f1b82'#上图所示
+# # MAILGUN_SERVER_NAME='sandbox38e9e90da12e4e65ad41477e61669e18.mailgun.org'#你的domain
+# EMAIL_USE_TLS = True
+# EMAIL_PORT = 587
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER = 'a102204022@gmail.com'
+# # LOGIN_REDIRECT_URL = '/article/article-list'
+# LOGIN_REDIRECT_URL = '/'
+# DEFAULT_FROM_EMAIL = '翔禾 <a102204022@gmail.com>'
+# EMAIL_HOST_PASSWORD = 'rlxizckyvaqvaays'
+# # from django.core.mail import send_mail
+# # send_mail('MailGun works great!', 'It really really does.', 'postermaster@YOURHOST.com', ['YOUREMAIL@gmail.com'], fail_silently=False)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
