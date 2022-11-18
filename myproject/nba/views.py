@@ -208,7 +208,7 @@ def Analyze_data(data):
     datas = soup.find('tbody')
     datas_tr = datas.find_all('tr')
     # cursor = connection.cursor()
-    conn = sqlite3.connect("myproject/db.sqlite3")
+    conn = sqlite3.connect("db.sqlite3")
     cursor = conn.cursor()
     cursor.execute('DELETE FROM  nba_nbadata')
     # cursor.execute("DELETE FROM sqlite_sequence WHERE name =  nba_nbadata")
