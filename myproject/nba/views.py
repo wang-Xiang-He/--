@@ -5,7 +5,8 @@ from django.db import connection
 import requests
 import random
 from bs4 import BeautifulSoup
-import pymysql.cursors
+# import pymysql.cursors
+import sqlite3
 import os
 import pandas as pd
 import math
@@ -206,7 +207,9 @@ def Analyze_data(data):
     soup = BeautifulSoup(data,'html.parser')
     datas = soup.find('tbody')
     datas_tr = datas.find_all('tr')
-    cursor = connection.cursor()
+    # cursor = connection.cursor()
+    conn = sqlite3.connect("myproject/db.sqlite3")
+    cursor = conn.cursor()
     cursor.execute('DELETE FROM  nba_nbadata')
     # cursor.execute("DELETE FROM sqlite_sequence WHERE name =  nba_nbadata")
     for tr in datas_tr:
