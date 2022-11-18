@@ -234,16 +234,18 @@ def Analyze_data(data):
                 cursor.execute("INSERT INTO nba_nbadata (ranking,ballgame,win,transport,winrate,logopath,area) VALUES ('%d','%s','%d','%d','%s','%s','%s')"%(
                     int(da1),da2,int(da3),int(da4),da5,img,area))
 
-            except ValueError:
-                pass
-            connection.commit()
+            except Exception as err:
+                print(err)
+            conn.commit()
 
         try:
+            
             team = NBAdata.objects.get(ballgame = da2)
             team.logopath = "/static/images/" + da2 + '.png'
             team.save()
         except:
             pass
+
 
 
 # def get_img(url,name):
