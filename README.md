@@ -1,5 +1,5 @@
 # 感謝各位來到我的網站
-### 在此先貼上連結 我的 NBA資訊網(https://nbaliveshows.onrender.com/news/)
+### 在此先貼上連結 我的 NBA資訊網(https://nbaliveshows.onrender.com/)
 #### 此專案 以 DJANGO(2.0) 為基礎開發並布署在 render 上
 
 ## 此網站主要分三大部分
